@@ -10,7 +10,7 @@ loginForm.addEventListener("submit", async (e) => {
 
     try{
 
-        const response = await fetch("http://localhost:5000/login", {
+        const response = await fetch("https://newbie-backend-rijc.onrender.com/login", {
 
             method: "POST",
 
