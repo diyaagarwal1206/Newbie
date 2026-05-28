@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEWBIE</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body> 
+ <!-- Navbar -->
+ <nav class="navbar">
+    <div class="logo">
+        <img src="images/newbielogo.png" alt="NEWBIE Logo">
+    </div>
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search outfits...">
+    
+    </div>
+    <ul class="nav-links">
+
+        <li><a href="index.html">HOME</a></li>
+    
+        <li class="dropdown">
+
+            <a href="#">SHOP ▼</a>
+        
+            <ul class="dropdown-menu">
+        
+                <li><a href="ootd.html">✨ OOTD</a></li>
+        
+                <li><a href="dresses.html">👗 Dresses</a></li>
+        
+                <li><a href="tops.html">👚 Tops</a></li>
+        
+                <li><a href="denims.html">👖 Denims</a></li>
+        
+                <li><a href="trousers.html">🤎 Trousers</a></li>
+        
+                <li><a href="bestseller.html">🔥 Best Sellers</a></li>
+        
+                <li><a href="newarrival.html">🌸 New Arrivals</a></li>
+        
+                <li><a href="summer.html">💙 Summer Collection</a></li>
+        
+            </ul>
+        
+        </li>
+        
+        <li><a href="signup.html">SIGNUP</a></li>
+
+        <li><a href="login.html">LOGIN</a></li>
+    
+        <li><a href="wishlist.html">WISHLIST ❤️</a></li>
+        <li id="user-info"></li>
+        <li>
+            <a href="cart.html">
+                CART🛒 <span id="cart-count">0</span>
+            </a>
+        </li>    
+        <li>
+            <button id="logout-btn">
+                Logout
+            </button>
+        </li>
+    </ul>  
+</nav>
+<section class="sale-slider">
+
+    <img id="saleImage"
+         src="images/sale.jpeg">
+
+    
+</section>
+
+<section class="shop-banner">
+
+    <h1>SHOP ALL ✨</h1>
+
+    <p>Find your perfect Pinterest-inspired fit</p>
+
+</section>
+
+<section class="shop-categories">
+
+    <h2 class="section-title">Shop By Category</h2>
+
+    <div class="category-icons">
+        <a href="dresses.html" class="cat-link">
+        <div class="cat-item">
+            <img src="images/dresses.jpeg">
+            <p>Dresses</p>
+        </div> </a>
+        <a href="outfits.html" class="cat-link">
+        <div class="cat-item">
+            <img src="images/outfit.jpeg">
+            <p>Fits</p>
+        </div></a>
+        <a href="tops.html" class="cat-link">
+        <div class="cat-item">
+            <img src="images/tops.jpeg">
+            <p>Tops</p>
+        </div></a>
+        <a href="denims.html" class="cat-link">
+        <div class="cat-item">
+            <img src="images/denims.jpeg">
+            <p>Denims</p>
+        </div></a>
+        <a href="trousers.html" class="cat-link">
+        <div class="cat-item">
+            <img src="images/trouser.jpeg">
+            <p>Trousers</p>
+        </div></a>
+        <a href="shoes.html" class="cat-link">
+        <div class="cat-item">
+            <img src="images/shoes.jpeg">
+            <p>Shoes</p>
+        </div></a>
+        <a href="bags.html" class="cat-link">
+        <div class="cat-item">
+            <img src="images/bags.jpeg">
+            <p>Bags</p>
+        </div></a>
+
+    </div>
+
+</section>
+
+  <!-- Product Section -->
+
+  <section id="products" class="products">
+
+    
+    <div class="product-container">
+
+        <!-- Card 1 -->
+        
+        <div class="product-card">
+            
+
+            
+        
+            <img src="images/outfit1.jpeg">
+        
+            <h3>Burgendy Red Fit</h3>
+        
+            <p>₹1999</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Burgendy Fit"
+            data-price="1999">
+                Add to Cart
+            </button> 
+            <button class="buy-btn">
+                Buy Now
+            </button>
+         
+        </div> 
+        <!-- Card 2 -->
+
+        <div class="product-card">
+
+            <img src="images/outfit2.jpeg" alt="">
+
+            <h3>Baddie Girl Outfit</h3>
+
+            <p>₹2499</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Baddie Girl Fit"
+            data-price="2499">
+                Add to Cart
+            </button>   
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button>
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="product-card">
+
+            <img src="images/outfit3.jpeg" alt="">
+
+            <h3>Casual Denim Look</h3>
+
+            <p>₹2199</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Casual Denim Look"
+            data-price="2199">
+                Add to Cart
+            </button> 
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button>  
+        </div>
+
+        <!-- Card 4 -->
+
+        <div class="product-card">
+
+            <img src="images/outfit4.jpeg" alt="">
+
+            <h3>Tee Denim Look</h3>
+
+            <p>₹2799</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Tee Denim look"
+            data-price="2799">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/dress1.jpeg" alt="">
+
+            <h3>white summer dress</h3>
+
+            <p>₹999</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="white summer dress"
+            data-price="999">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+        <div class="product-card">
+
+            <img src="images/dress2.jpeg" alt="">
+
+            <h3>cute bow dress</h3>
+
+            <p>₹1299</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="cute bow dress"
+            data-price="1299">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+        <div class="product-card">
+
+            <img src="images/dress3.jpeg" alt="">
+
+            <h3>off shoulder dress</h3>
+
+            <p>₹999</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="off shoulder dress"
+            data-price="999">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+        <div class="product-card">
+
+            <img src="images/top1.jpeg" alt="">
+
+            <h3>Cute blue top</h3>
+
+            <p>₹599</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="cute blue top"
+            data-price="599">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+        <div class="product-card">
+
+            <img src="images/top2.jpeg" alt="">
+
+            <h3>Baddie white top</h3>
+
+            <p>₹999</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Baddie white top"
+            data-price="999">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+        <div class="product-card">
+
+            <img src="images/top3.jpeg" alt="">
+
+            <h3>Animal print top</h3>
+
+            <p>₹899</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Animal print top"
+            data-price="899">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/fit1.jpeg" alt="">
+
+            <h3>Cute Pink Fit</h3>
+
+            <p>₹1899</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Cute Pink Fit"
+            data-price="1899">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/fit2.jpeg" alt="">
+
+            <h3>Beachy Fit</h3>
+
+            <p>₹2299</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Beachy Fit"
+            data-price="2299">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/fit3.jpeg" alt="">
+
+            <h3>Sporty Fit</h3>
+
+            <p>₹1899</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Sporty Fit"
+            data-price="1899">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/fit4.jpeg" alt="">
+
+            <h3>Valentine Fit</h3>
+
+            <p>₹2999</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Valentine Fit"
+            data-price="2999">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/fit5.jpeg" alt="">
+
+            <h3>Trendy butter yellow</h3>
+
+            <p>₹1999</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Trendy butter yellow"
+            data-price="1999">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/denim1.jpeg" alt="">
+
+            <h3>Bootcut Babe</h3>
+
+            <p>₹1999</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Bootcut babe"
+            data-price="1999">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/denim2.jpeg" alt="">
+
+            <h3>Wideleg Jean</h3>
+
+            <p>₹1999</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Wideleg jean"
+            data-price="1999">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/denim3.jpeg" alt="">
+
+            <h3>Baggy Baddie</h3>
+
+            <p>₹1999</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Baggy Baddie"
+            data-price="1999">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/denim4.jpeg" alt="">
+
+            <h3>Straight Fit Jean</h3>
+
+            <p>₹1999</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Straight Fit jean"
+            data-price="1999">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/denim5.jpeg" alt="">
+
+            <h3>Denim Mini Skirt</h3>
+
+            <p>₹999</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Denim Mini Skirt"
+            data-price="999">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/denim6.jpeg" alt="">
+
+            <h3>Denim BG Shorts</h3>
+
+            <p>₹999</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Denim BG Shorts"
+            data-price="999">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+        <div class="product-card">
+
+            <img src="images/shoes.jpeg" alt="">
+
+            <h3>BW Shoe</h3>
+
+            <p>₹1999</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="BW Shoe"
+            data-price="1999">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/shoe1.jpeg" alt="">
+
+            <h3>Black Heels</h3>
+
+            <p>₹899</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Black heels"
+            data-price="899">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/shoe2.jpeg" alt="">
+
+            <h3>Baby Blue Heels</h3>
+
+            <p>₹1299</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Baby blue heels"
+            data-price="1299">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/shoe3.jpeg" alt="">
+
+            <h3>Chunky Black Loafers</h3>
+
+            <p>₹1999</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Chunky Black loafers"
+            data-price="1999">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/bag1.jpeg" alt="">
+
+            <h3>Moon Bag</h3>
+
+            <p>₹999</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Moon Bag"
+            data-price="999">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/bag2.jpeg" alt="">
+
+            <h3>The Beach bag</h3>
+
+            <p>₹699</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="The beach bag"
+            data-price="699">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/bag3.jpeg" alt="">
+
+            <h3>Denim Tote</h3>
+
+            <p>₹1999</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Denim tote"
+            data-price="1999">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/bags.jpeg" alt="">
+
+            <h3>Black moon bag</h3>
+
+            <p>₹999</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Black Moon bag"
+            data-price="999">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/trouser.jpeg" alt="">
+
+            <h3>Black basic trouser</h3>
+
+            <p>₹1199</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Black basic trouser"
+            data-price="1199">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/trousers.jpeg" alt="">
+
+            <h3>White Formal Trouser</h3>
+
+            <p>₹1199</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="White Formal Trouser"
+            data-price="1199">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/tshirt1.jpeg" alt="">
+
+            <h3>basic White tee</h3>
+
+            <p>₹499</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Basic White Tee"
+            data-price="499">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/tee.jpeg" alt="">
+
+            <h3>Oversized strawberry tee</h3>
+
+            <p>₹499</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Oversized Strawberry tee"
+            data-price="499">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/dresses.jpeg" alt="">
+
+            <h3>denim dress</h3>
+
+            <p>₹1999</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Denim Dress"
+            data-price="1999">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/tops.jpeg" alt="">
+
+            <h3>Brown tee</h3>
+
+            <p>₹499</p>
+            <button class="wishlist-btn">
+                ❤️ Wishlist
+            </button>
+            <button class="cart-btn"
+            data-name="Brown tee"
+            data-price="499">
+                Add to Cart
+            </button>  
+        </button> 
+        <button class="buy-btn">
+            Buy Now
+        </button> 
+        </div>
+
+       
+       
+    </div>
+
+</section>
+
+<section class="coming-soon">
+
+    <h2>More Cute Fits Loading... 💙</h2>
+
+    <p>
+        New arrivals, Pinterest-inspired outfits, dreamy dresses,
+        cozy tops, and trend-worthy looks are dropping soon.
+        Stay tuned bestie ✨
+    </p>
+
+</section>
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-section">
+
+            <img src="images/newbielogo.png" alt="NEWBIE Logo" class="footer-logo">
+        
+            <p>
+                Fashion inspired by Pinterest aesthetics and Gen-Z trends.
+            </p>
+        
+            <p class="tagline">
+                Fashion For Every You 💙
+            </p>
+        
+        </div>  
+        <div class="footer-section">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="cart.html">Cart</a></li>   
+            </ul>
+
+        </div>
+
+        <div class="footer-section">
+
+            <h3>Contact</h3>
+
+            <p>Email: <a href="mailto:support@newbie.com">
+                support@newbie.com
+                </a></p>
+
+            <p>Instagram:<a href="https://instagram.com"> 
+                @newbiefashion
+            </a></p>
+
+        </div>
+        <div class="footer-section">
+
+            <h3>Follow Us</h3>
+        
+            <p><a href="https://instagram.com" target="_blank">
+                📷 Instagram
+                </a></p>
+        
+            <p><a href="https://pinterest.com" target="_blank">
+                📌 Pinterest
+                </a></p>
+        
+            <p><a href="https://tiktok.com" target="_blank">
+                🎵 TikTok
+                </a></p>
+        
+        </div>
+        <div class="footer-section">
+
+            <h3>Stay Updated 💙</h3>
+        
+            <input
+                type="email"
+                placeholder="Enter your email">
+        
+            <button>Subscribe</button>
+        
+        </div>   
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 NEWBIE. All Rights Reserved 💙
+    </p>
+
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

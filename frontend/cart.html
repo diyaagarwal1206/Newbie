@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEWBIE | Cart</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                <img src="images/newbielogo.png" alt="Logo">
+
+            </a>
+
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">HOME</a>
+
+            <a href="shop.html">SHOP</a>
+
+            <a href="wishlist.html">WISHLIST ❤️</a>
+
+        </div>
+
+    </nav>
+
+    <!-- Cart Section -->
+
+    <section class="products">
+
+        <div class="title-banner">
+
+            <h2 class="section-title">
+                Your Cart 🛒
+            </h2>
+
+            <p class="category-subtitle">
+                Your selected Pinterest-inspired fits 💙
+            </p>
+
+        </div>
+
+        <div id="cart-items" class="product-container">
+
+        </div>
+
+        <h2 id="total-price"
+        style="text-align:center; margin-top:30px;">
+        </h2>
+        <button id="checkout-btn">
+            Proceed To Checkout 💳
+        </button>  
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p class="copyright">
+            © 2026 NEWBIE 💙
+        </p>
+
+    </footer>
+
+<script>
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+const cartItems = document.getElementById("cart-items");
+
+const totalPrice = document.getElementById("total-price");
+
+function displayCart(){
+
+    cartItems.innerHTML = "";
+
+    let total = 0;
+
+    if(cart.length === 0){
+
+        cartItems.innerHTML = `
+
+            <h2 style="text-align:center;">
+                Your cart is empty 🛒
+            </h2>
+        `;
+
+        totalPrice.innerText = "";
+
+        return;
+    }
+
+    cart.forEach((item,index) => {
+
+        total += Number(item.price);
+
+        cartItems.innerHTML += `
+
+        <div class="product-card">
+
+            <img src="${item.image}">
+
+            <h3>${item.name}</h3>
+
+            <p>₹${item.price}</p>
+
+            <button onclick="removeItem(${index})"
+            class="buy-btn">
+
+                Remove ❌
+
+            </button>
+
+        </div>
+        `;
+    });
+
+    totalPrice.innerText =
+    "Total: ₹" + total;
+}
+
+displayCart();
+
+function removeItem(index){
+
+    cart.splice(index,1);
+
+    localStorage.setItem("cart",
+    JSON.stringify(cart));
+
+    displayCart();
+}
+
+</script>
+<script src="js/cart.js"></script>
+</body>
+
+</html>

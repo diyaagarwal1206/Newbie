@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEWBIE</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/newbielogo.png" alt="NEWBIE Logo">
+        </div>
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search outfits...">
+        
+        </div>
+        <ul class="nav-links">
+
+            <li><a href="index.html">HOME</a></li>
+        
+            <li class="dropdown">
+
+                <a href="#">SHOP ▼</a>
+            
+                <ul class="dropdown-menu">
+            
+                    <li><a href="outfits.html">✨ Fits</a></li>
+            
+                    <li><a href="dresses.html">👗 Dresses</a></li>
+            
+                    <li><a href="tops.html">👚 Tops</a></li>
+            
+                    <li><a href="denims.html">👖 Denims</a></li>
+            
+                    <li><a href="trousers.html">🤎 Trousers</a></li>
+            
+                    <li><a href="bestseller.html">🔥 Best Sellers</a></li>
+            
+                    <li><a href="newarrival.html">🌸 New Arrivals</a></li>
+            
+                    <li><a href="summer.html">💙 Summer Collection</a></li>
+            
+                </ul>
+            
+            </li>
+            
+            <li><a href="signup.html">SIGNUP</a></li>
+
+            <li><a href="login.html">LOGIN</a></li>
+        
+            <li><a href="wishlist.html">WISHLIST ❤️</a></li>
+            <li id="user-info"></li>
+            <li>
+                <a href="cart.html">
+                    CART🛒 <span id="cart-count">0</span>
+                </a>
+            </li>    
+            <li>
+                <button id="logout-btn">
+                    Logout
+                </button>
+            </li>
+        </ul>  
+    </nav>
+    <a href="sale.html">
+
+        <section class="sale-slider">
+    
+            <img id="saleImage"
+                 src="images/sale.jpeg">
+    
+        </section>
+    
+    </a>   
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+
+<section class="hero">
+
+    
+
+    <div class="hero-content">
+
+        <h1>
+            Cute Fits <br>
+            For Cute Girls 
+        </h1>
+
+        <p>
+            Pinterest inspired outfits for every mood 
+        </p>
+
+        <a href="shop.html" class="hero-btn">
+            SHOP NOW
+        </a>   
+    
+    </div>
+
+    <div class="blur-circle one"></div>
+    <div class="blur-circle two"></div>
+
+</section>
+<section class="categories">
+
+    <div class="title-banner">
+
+        <h2 class="section-title">SHOP BY CATEGORY</h2>
+    
+        <p class="category-subtitle">
+            Discover your aesthetic, one outfit at a time ✨
+        </p>
+    
+    </div>
+    
+    <div class="category-grid">
+       
+        <a href="tops.html" class="cat-link">
+         <div class="category-card">
+            <img src="images/top.jpeg" alt="Tops">
+            <h3>Tops</h3>
+        </div></a>
+    
+        
+        <a href="denims.html" class="cat-link">
+        <div class="category-card">
+            <img src="images/denim.jpeg" alt="Denims">
+            <h3>Denims</h3>
+        </div></a>
+        
+        <a href="tee.html" class="cat-link">
+        <div class="category-card">
+            <img src="images/tshirt1.jpeg" alt="Tshirts">
+            <h3>Tshirts</h3>
+        </div></a>
+        
+        <a href="trousers.html" class="cat-link">
+        <div class="category-card">
+            <img src="images/tro.jpeg" alt="Trousers">
+            <h3>Trousers</h3>
+        </div></a>
+        
+        <a href="outfits.html" class="cat-link">
+        <div class="category-card">
+            <img src="images/outfit.jpeg" alt="Full Outfits">
+            <h3>Full Outfits</h3>
+        </div></a>
+    
+    </section>
+    <section class="featured">
+
+        <div class="title-banner">
+
+            <h2 class="section-title">FEATURED COLLECTION</h2>
+        
+            <p class="category-subtitle">
+                ✨ Handpicked Pinterest-inspired looks for every aesthetic ✨
+            </p>
+        
+        </div>  
+    
+    
+        <div class="featured-grid">
+
+            <div class="featured-card">
+        
+                <img src="images/softgirl.jpeg" alt="Outfit">
+        
+                <h3>Soft Girl Aesthetic</h3>
+        
+                <p>₹1999</p>
+        
+                <button class="wishlist-btn">❤️ Wishlist</button>
+        
+                <button class="cart-btn"
+                data-name="Soft Girl Aesthetic"
+                data-price="1999">
+                    🛒 Add To Cart
+                </button>
+        
+                <button class="buy-btn">⚡ Buy Now</button>
+        
+            </div>
+        
+            <div class="featured-card">
+        
+                <img src="images/korean.jpeg" alt="Outfit">
+        
+                <h3>Korean Street Style</h3>
+        
+                <p>₹2499</p>
+        
+                <button class="wishlist-btn">❤️ Wishlist</button>
+        
+                <button class="cart-btn"
+                data-name="Korean Street Style"
+                data-price="2499">
+                    🛒 Add To Cart
+                </button>
+        
+                <button class="buy-btn">⚡ Buy Now</button>
+        
+            </div>
+        
+            <div class="featured-card">
+        
+                <img src="images/denimm.jpeg" alt="Outfit">
+        
+                <h3>Denim Dream</h3>
+        
+                <p>₹2199</p>
+        
+                <button class="wishlist-btn">❤️ Wishlist</button>
+        
+                <button class="cart-btn"
+                data-name="Denim Dream"
+                data-price="2199">
+                    🛒 Add To Cart
+                </button>
+        
+                <button class="buy-btn">⚡ Buy Now</button>
+        
+            </div>
+        
+        </div>  
+<!-- Banner -->
+
+<section class="banner">
+
+    <div class="banner-box">
+
+        <h2>SUMMER COLLECTIONS</h2>
+
+        <p>
+            Soft girl outfits inspired by Pinterest aesthetics🌸
+        </p>
+
+        <div class="summer-grid">
+
+            <a href="summer.html">
+                <img src="images/summer1.jpeg" alt="Summer Outfit">
+            </a>
+        
+            <a href="summer.html">
+                <img src="images/summer2.jpeg" alt="Summer Outfit">
+            </a>
+        
+            <a href="summer.html">
+                <img src="images/summer3.jpeg" alt="Summer Outfit">
+            </a>
+        
+            <a href="summer.html">
+                <img src="images/summer4.jpeg" alt="Summer Outfit">
+            </a>
+        
+        </div>   
+    </div>
+
+</section>
+    <!-- Product Section -->
+
+    <section id="products" class="products">
+
+    <div class="title-banner">
+
+        <h2 class="section-title">
+            TRENDING FITS
+        </h2>
+    
+        <p class="category-subtitle">
+            The looks everyone's obsessed with this week 💙
+        </p>
+    
+    </div>
+    <div class="product-container">
+
+        <div class="product-card">
+    
+            <img src="images/outfit1.jpeg">
+    
+            <h3>Burgendy Red Fit</h3>
+    
+            <p>₹1999</p>
+    
+            <button class="wishlist-btn">❤️ Wishlist</button>
+    
+            <button class="cart-btn"
+            data-name="Burgendy Fit"
+            data-price="1999">
+                🛒 Add To Cart
+            </button>
+    
+            <button class="buy-btn">⚡ Buy Now</button>
+    
+        </div>
+    
+        <div class="product-card">
+    
+            <img src="images/outfit2.jpeg">
+    
+            <h3>Baddie Girl Outfit</h3>
+    
+            <p>₹2499</p>
+    
+            <button class="wishlist-btn">❤️ Wishlist</button>
+    
+            <button class="cart-btn"
+            data-name="Baddie Girl Fit"
+            data-price="2499">
+                🛒 Add To Cart
+            </button>
+    
+            <button class="buy-btn">⚡ Buy Now</button>
+    
+        </div>
+    
+        <div class="product-card">
+    
+            <img src="images/outfit3.jpeg">
+    
+            <h3>Casual Denim Look</h3>
+    
+            <p>₹2199</p>
+    
+            <button class="wishlist-btn">❤️ Wishlist</button>
+    
+            <button class="cart-btn"
+            data-name="Casual Denim Look"
+            data-price="2199">
+                🛒 Add To Cart
+            </button>
+    
+            <button class="buy-btn">⚡ Buy Now</button>
+    
+        </div>
+    
+        <div class="product-card">
+    
+            <img src="images/outfit4.jpeg">
+    
+            <h3>Tee Denim Look</h3>
+    
+            <p>₹2799</p>
+    
+            <button class="wishlist-btn">❤️ Wishlist</button>
+    
+            <button class="cart-btn"
+            data-name="Tee Denim Look"
+            data-price="2799">
+                🛒 Add To Cart
+            </button>
+    
+            <button class="buy-btn">⚡ Buy Now</button>
+    
+        </div>
+    
+    </div>   
+<section class="reviews">
+
+    <div class="title-banner">
+
+        <h2 class="section-title">
+            What Our Girls Say 💙
+        </h2>
+
+        <p class="category-subtitle">
+            Loved by fashion lovers everywhere ✨
+        </p>
+
+    </div>
+
+    <div class="review-container">
+
+        <div class="review-card">
+
+            <h3>⭐⭐⭐⭐⭐</h3>
+
+            <p>
+                Absolutely obsessed with the quality and aesthetic outfits!
+            </p>
+
+            <h4>- Aisha</h4>
+
+        </div>
+
+        <div class="review-card">
+
+            <h3>⭐⭐⭐⭐⭐</h3>
+
+            <p>
+                The Pinterest-inspired collection is exactly what I wanted.
+            </p>
+
+            <h4>- Riya</h4>
+
+        </div>
+
+        <div class="review-card">
+
+            <h3>⭐⭐⭐⭐⭐</h3>
+
+            <p>
+                Super cute outfits and amazing customer experience.
+            </p>
+
+            <h4>- Ananya</h4>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-section">
+
+            <img src="images/newbielogo.png" alt="NEWBIE Logo" class="footer-logo">
+        
+            <p>
+                Fashion inspired by Pinterest aesthetics and Gen-Z trends.
+            </p>
+        
+            <p class="tagline">
+                Fashion For Every You 💙
+            </p>
+        
+        </div>  
+        <div class="footer-section">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="cart.html">Cart</a></li>   
+            </ul>
+
+        </div>
+
+        <div class="footer-section">
+
+            <h3>Contact</h3>
+
+            <p>Email: <a href="mailto:support@newbie.com">
+                support@newbie.com
+                </a></p>
+
+            <p>Instagram:<a href="https://instagram.com"> 
+                @newbiefashion
+            </a></p>
+
+        </div>
+        <div class="footer-section">
+
+            <h3>Follow Us</h3>
+        
+            <p><a href="https://instagram.com" target="_blank">
+                📷 Instagram
+                </a></p>
+        
+            <p><a href="https://pinterest.com" target="_blank">
+                📌 Pinterest
+                </a></p>
+        
+            <p><a href="https://tiktok.com" target="_blank">
+                🎵 TikTok
+                </a></p>
+        
+        </div>
+        <div class="footer-section">
+
+            <h3>Stay Updated 💙</h3>
+        
+            <input
+                type="email"
+                placeholder="Enter your email">
+        
+            <button>Subscribe</button>
+        
+        </div>   
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 NEWBIE. All Rights Reserved 💙
+    </p>
+
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>NEWBIE | Checkout</title>
+
+    <link rel="stylesheet"
+    href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <img src="images/newbielogo.png"
+            alt="NEWBIE Logo">
+
+        </a>
+
+    </div>
+
+    <ul class="nav-links">
+
+        <li><a href="index.html">HOME</a></li>
+
+        <li><a href="shop.html">SHOP</a></li>
+
+        <li><a href="cart.html">CART 🛒</a></li>
+
+        <li><a href="wishlist.html">WISHLIST ❤️</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- Checkout Section -->
+
+<section class="checkout-page">
+
+    <div class="checkout-container">
+
+        <h1>Checkout 💳</h1>
+
+        <p>
+            Almost yours bestie ✨
+        </p>
+
+        <form class="checkout-form">
+
+            <input type="text"
+            placeholder="Full Name"
+            required>
+
+            <input type="email"
+            placeholder="Email Address"
+            required>
+
+            <input type="text"
+            placeholder="Phone Number"
+            required>
+
+            <textarea
+            placeholder="Shipping Address"
+            required></textarea>
+
+            <select required>
+
+                <option>
+                    Select Payment Method
+                </option>
+
+                <option>
+                    UPI
+                </option>
+
+                <option>
+                    Credit Card
+                </option>
+
+                <option>
+                    Debit Card
+                </option>
+
+                <option>
+                    Cash On Delivery
+                </option>
+
+            </select>
+
+            <button type="submit"
+            class="place-order-btn">
+
+                Place Order ✨
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p class="copyright">
+        © 2026 NEWBIE 💙
+    </p>
+
+</footer>
+
+<script>
+
+const form =
+document.querySelector(".checkout-form");
+
+form.addEventListener("submit", (e) => {
+
+    e.preventDefault();
+
+    alert(
+        "Order Placed Successfully 💙✨"
+    );
+
+    window.location.href = "index.html";
+
+});
+
+</script>
+
+</body>
+
+</html>

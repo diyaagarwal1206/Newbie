@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>NEWBIE | Wishlist</title>
+
+    <link rel="stylesheet"
+    href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <img src="images/newbielogo.png"
+            alt="Logo">
+
+        </a>
+
+    </div>
+
+    <div class="nav-links">
+
+        <a href="index.html">HOME</a>
+
+        <a href="shop.html">SHOP</a>
+
+        <a href="cart.html">CART 🛒</a>
+
+    </div>
+
+</nav>
+
+<!-- Wishlist -->
+
+<section class="products">
+
+    <div class="title-banner">
+
+        <h2 class="section-title">
+            Your Wishlist ❤️
+        </h2>
+
+        <p class="category-subtitle">
+            Your saved dreamy fits ✨
+        </p>
+
+    </div>
+
+    <div id="wishlist-items"
+    class="product-container">
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p class="copyright">
+        © 2026 NEWBIE 💙
+    </p>
+
+</footer>
+
+<script>
+
+let wishlist =
+JSON.parse(localStorage.getItem("wishlist")) || [];
+
+const wishlistItems =
+document.getElementById("wishlist-items");
+
+function displayWishlist(){
+
+    wishlistItems.innerHTML = "";
+
+    if(wishlist.length === 0){
+
+        wishlistItems.innerHTML = `
+
+        <h2 style="text-align:center; width:100%;">
+
+            Wishlist is empty ❤️
+
+        </h2>
+        `;
+
+        return;
+    }
+
+    wishlist.forEach((item,index) => {
+
+        wishlistItems.innerHTML += `
+
+        <div class="product-card">
+
+            <img src="${item.image}">
+
+            <h3>${item.name}</h3>
+
+            <p>₹${item.price}</p>
+
+            <button onclick="removeWishlist(${index})"
+            class="buy-btn">
+
+                Remove ❌
+
+            </button>
+
+        </div>
+        `;
+    });
+}
+
+displayWishlist();
+
+function removeWishlist(index){
+
+    wishlist.splice(index,1);
+
+    localStorage.setItem(
+        "wishlist",
+        JSON.stringify(wishlist)
+    );
+
+    displayWishlist();
+}
+
+</script>
+<script src="js/script.js"></script>
+</body>
+
+</html>
