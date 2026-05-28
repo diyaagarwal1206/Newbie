@@ -1227,3 +1227,118 @@ footer{
 
     margin: 20px auto;
 }
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px){
+
+    .navbar{
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .logo img{
+        height: 80px;
+    }
+
+    .search-box input{
+        width: 90vw;
+    }
+
+    .nav-links{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding: 0;
+    }
+
+    .nav-links li{
+        font-size: 13px;
+    }
+
+    .sale-slider{
+        height: 180px;
+    }
+
+    .sale-slider img{
+        object-fit: cover;
+    }
+
+    .hero{
+        min-height: 70vh;
+        padding-left: 20px;
+        background-position: center;
+    }
+
+    .hero-content h1{
+        font-size: 42px;
+    }
+
+    .hero-content p{
+        font-size: 16px;
+    }
+
+    .hero-btn{
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    .section-title{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .category-subtitle{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .category-grid,
+    .featured-grid,
+    .product-container,
+    .review-container,
+    .summer-grid,
+    .category-icons{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-card,
+    .featured-card,
+    .product-card,
+    .review-card{
+        width: 85%;
+    }
+
+    .product-card img,
+    .featured-card img{
+        width: 100%;
+        height: auto;
+    }
+
+    .shop-banner,
+    .coming-soon{
+        padding: 50px 20px;
+    }
+
+    .shop-banner h1,
+    .coming-soon h2{
+        font-size: 30px;
+    }
+
+    .shop-banner p,
+    .coming-soon p{
+        font-size: 16px;
+    }
+
+    .footer-content{
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer-section{
+        width: 100%;
+    }
+}
