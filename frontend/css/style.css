@@ -1206,11 +1206,6 @@ footer{
 .checkout-link:hover{
     transform:scale(1.05);
 }
-
-#checkout-btn:hover{
-
-    transform: scale(1.05);
-}
 .cart-container{
 
     display: flex;
@@ -1219,6 +1214,8 @@ footer{
 
     align-items: center;
 }
+
+
 .mobile-bottom-nav{
     display:none;
 }
