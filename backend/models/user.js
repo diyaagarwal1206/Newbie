@@ -18,9 +18,44 @@ const userSchema = new mongoose.Schema({
         required: true
     },
 
-    gender: {
-        type: String
-    }
+    gender: String,
+
+    phone: String,
+
+    address: String,
+
+    dob: String,
+
+    style: String,
+
+    size: String,
+
+    cart: [
+        {
+            name: String,
+            price: String,
+            image: String
+        }
+    ],
+
+    wishlist: [
+        {
+            name: String,
+            price: String,
+            image: String
+        }
+    ],
+
+    orderHistory: [
+        {
+            items: Array,
+            total: Number,
+            date: {
+                type: Date,
+                default: Date.now
+            }
+        }
+    ]
 
 });
 
