@@ -117,78 +117,128 @@ setInterval(() => {
 
 }, 3000);
 
-// CART SYSTEM
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+const API_URL = "https://newbie-backend-rijc.onrender.com";
+
+// CART SYSTEM
 
 const cartButtons = document.querySelectorAll(".cart-btn");
 
 const cartCount = document.getElementById("cart-count");
 
-// Update cart count
+async function updateCartCount(){
 
-function updateCartCount() {
+    const userId = localStorage.getItem("userId");
 
-    if(cartCount){
+    if(!cartCount || !userId){
+        if(cartCount){
+            cartCount.innerText = 0;
+        }
+        return;
+    }
+
+    try{
+
+        const response = await fetch(`${API_URL}/cart/${userId}`);
+
+        const cart = await response.json();
 
         cartCount.innerText = cart.length;
+
+    }
+
+    catch(error){
+
+        console.log(error);
     }
 }
 
 updateCartCount();
 
-// Add products to cart
 cartButtons.forEach(button => {
 
-    button.addEventListener("click", () => {
+    button.addEventListener("click", async () => {
+
         if(!checkLoginBeforeAction()) return;
+
+        const userId = localStorage.getItem("userId");
 
         const productCard = button.parentElement;
 
-        const name =
-        productCard.querySelector("h3").innerText;
+        const name = productCard.querySelector("h3").innerText;
 
-        const price =
-        productCard.querySelector("p").innerText
-        .replace("₹","");
+        const price = productCard.querySelector("p").innerText.replace("₹","");
 
-        const image =
-        productCard.querySelector("img").src;
+        const image = productCard.querySelector("img").src;
 
         const product = {
-
             name,
             price,
             image
         };
 
-        cart.push(product);
+        try{
 
-        localStorage.setItem("cart",
-        JSON.stringify(cart));
+            const response = await fetch(`${API_URL}/cart/add`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    userId,
+                    product
+                })
+            });
 
-        updateCartCount();
+            const data = await response.json();
 
-        alert(name + " added to cart 🛒");
+            alert(data.message);
+
+            updateCartCount();
+
+        }
+
+        catch(error){
+
+            console.log(error);
+
+            alert("Cart error");
+        }
+
     });
+
 });
 
 // WISHLIST SYSTEM
 
-let wishlist =
-JSON.parse(localStorage.getItem("wishlist")) || [];
+const wishlistButtons = document.querySelectorAll(".wishlist-btn");
 
-const wishlistButtons =
-document.querySelectorAll(".wishlist-btn");
+const wishlistCount = document.getElementById("wishlist-count");
 
-const wishlistCount =
-document.getElementById("wishlist-count");
+async function updateWishlistCount(){
 
-function updateWishlistCount(){
+    const userId = localStorage.getItem("userId");
 
-    if(wishlistCount){
+    if(!wishlistCount || !userId){
+        if(wishlistCount){
+            wishlistCount.innerText = 0;
+        }
+        return;
+    }
+
+    try{
+
+        const response = await fetch(`${API_URL}/wishlist/${userId}`);
+
+        const wishlist = await response.json();
 
         wishlistCount.innerText = wishlist.length;
+
+    }
+
+    catch(error){
+
+        console.log(error);
     }
 }
 
@@ -196,39 +246,56 @@ updateWishlistCount();
 
 wishlistButtons.forEach(button => {
 
-    button.addEventListener("click", () => {
+    button.addEventListener("click", async () => {
+
         if(!checkLoginBeforeAction()) return;
+
+        const userId = localStorage.getItem("userId");
 
         const productCard = button.parentElement;
 
-        const name =
-        productCard.querySelector("h3").innerText;
+        const name = productCard.querySelector("h3").innerText;
 
-        const price =
-        productCard.querySelector("p").innerText
-        .replace("₹","");
+        const price = productCard.querySelector("p").innerText.replace("₹","");
 
-        const image =
-        productCard.querySelector("img").src;
+        const image = productCard.querySelector("img").src;
 
         const product = {
-
             name,
             price,
             image
         };
 
-        wishlist.push(product);
+        try{
 
-        localStorage.setItem(
-            "wishlist",
-            JSON.stringify(wishlist)
-        );
+            const response = await fetch(`${API_URL}/wishlist/add`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    userId,
+                    product
+                })
+            });
 
-        updateWishlistCount();
+            const data = await response.json();
 
-        alert(name + " added to wishlist ❤️");
+            alert(data.message);
+
+            updateWishlistCount();
+
+        }
+
+        catch(error){
+
+            console.log(error);
+
+            alert("Wishlist error");
+        }
+
     });
+
 });
 
 // BUY NOW BUTTONS

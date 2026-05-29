@@ -31,15 +31,15 @@ loginForm.addEventListener("submit", async (e) => {
 
         if(response.status === 200){
 
-            // store login info
-        
             localStorage.setItem("isLoggedIn", "true");
-        
-            localStorage.setItem("userEmail", email);
-        
+
+            localStorage.setItem("userEmail", data.email);
+
+            localStorage.setItem("userId", data.userId);
+
             window.location.href = "index.html";
-        
-        } 
+
+        }
 
     }
 

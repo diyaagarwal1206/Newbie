@@ -1,51 +1,107 @@
 const cartItems = document.getElementById("cart-items");
 
-const cart = JSON.parse(localStorage.getItem("cart")) || [];
+const totalPrice = document.getElementById("total-price");
 
-cart.forEach((item, index) => {
+const userId = localStorage.getItem("userId");
 
-    const div = document.createElement("div");
+const API_URL = "https://newbie-backend-rijc.onrender.com";
 
-    div.classList.add("product-card");
+async function loadCart(){
 
-    div.innerHTML = `
+    if(!userId){
 
-        <h3>${item.name}</h3>
+        cartItems.innerHTML = `
+            <h2 style="text-align:center; width:100%;">
+                Please login to view your cart 🛒
+            </h2>
+        `;
 
-        <p>₹${item.price}</p>
+        return;
+    }
 
-        <button onclick="removeItem(${index})">
-            Remove
-        </button>
+    try{
 
-    `;
+        const response = await fetch(`${API_URL}/cart/${userId}`);
 
-    cartItems.appendChild(div);
+        const cart = await response.json();
 
-});
+        cartItems.innerHTML = "";
 
-function removeItem(index){
+        let total = 0;
 
-    cart.splice(index, 1);
+        if(cart.length === 0){
 
-    localStorage.setItem("cart", JSON.stringify(cart));
+            cartItems.innerHTML = `
+                <h2 style="text-align:center; width:100%;">
+                    Your cart is empty 🛒
+                </h2>
+            `;
 
-    location.reload();
+            if(totalPrice){
+                totalPrice.innerText = "";
+            }
 
+            return;
+        }
+
+        cart.forEach((item, index) => {
+
+            total += Number(item.price);
+
+            const div = document.createElement("div");
+
+            div.classList.add("product-card");
+
+            div.innerHTML = `
+                <img src="${item.image}">
+
+                <h3>${item.name}</h3>
+
+                <p>₹${item.price}</p>
+
+                <button onclick="removeItem(${index})" class="buy-btn">
+                    Remove ❌
+                </button>
+            `;
+
+            cartItems.appendChild(div);
+
+        });
+
+        if(totalPrice){
+            totalPrice.innerText = `Total: ₹${total}`;
+        }
+
+    }
+
+    catch(error){
+
+        console.log(error);
+
+        cartItems.innerHTML = `
+            <h2 style="text-align:center; width:100%;">
+                Error loading cart
+            </h2>
+        `;
+    }
 }
 
-// CHECKOUT BUTTON
+async function removeItem(index){
 
-const checkoutBtn =
-document.getElementById("checkout-btn");
+    try{
 
-if(checkoutBtn){
+        await fetch(`${API_URL}/cart/remove/${userId}/${index}`, {
+            method: "DELETE"
+        });
 
-    checkoutBtn.addEventListener("click", () => {
+        loadCart();
 
-        window.location.href =
-        "checkout.html";
+    }
 
-    });
+    catch(error){
 
+        console.log(error);
+    }
 }
+
+loadCart();
