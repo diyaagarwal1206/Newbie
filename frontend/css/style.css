@@ -1615,3 +1615,19 @@ footer{
 .profile-save-btn:hover{
     transform:scale(1.03);
 }
+
+.checkout-link{
+    display:inline-block;
+    padding:15px 35px;
+    border-radius:30px;
+    background:linear-gradient(to right,#7ec8e3,#b6e6ff);
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+    margin-top:20px;
+    cursor:pointer;
+}
+
+.checkout-link:hover{
+    transform:scale(1.05);
+}
