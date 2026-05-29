@@ -1,6 +1,20 @@
 // check login
 // show user email
+function checkLoginBeforeAction(){
 
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+    if(!isLoggedIn){
+
+        alert("Please login first to continue 💙");
+
+        window.location.href = "login.html";
+
+        return false;
+    }
+
+    return true;
+}
 const userInfo = document.getElementById("user-info");
 
 const userEmail = localStorage.getItem("userEmail");
@@ -8,13 +22,6 @@ const userEmail = localStorage.getItem("userEmail");
 if(userInfo){
 
     userInfo.innerHTML = `👤 ${userEmail}`;
-
-}
-const isLoggedIn = localStorage.getItem("isLoggedIn");
-
-if(!isLoggedIn){
-
-    window.location.href = "login.html";
 
 }
 
@@ -124,6 +131,7 @@ updateCartCount();
 cartButtons.forEach(button => {
 
     button.addEventListener("click", () => {
+        if(!checkLoginBeforeAction()) return;
 
         const productCard = button.parentElement;
 
@@ -179,6 +187,7 @@ updateWishlistCount();
 wishlistButtons.forEach(button => {
 
     button.addEventListener("click", () => {
+        if(!checkLoginBeforeAction()) return;
 
         const productCard = button.parentElement;
 
@@ -214,15 +223,15 @@ wishlistButtons.forEach(button => {
 
 // BUY NOW BUTTONS
 
-const buyButtons =
-document.querySelectorAll(".buy-btn");
+const buyButtons = document.querySelectorAll(".buy-btn");
 
 buyButtons.forEach(button => {
 
     button.addEventListener("click", () => {
 
-        window.location.href =
-        "checkout.html";
+        if(!checkLoginBeforeAction()) return;
+
+        window.location.href = "checkout.html";
 
     });
 
