@@ -21,8 +21,18 @@ const userEmail = localStorage.getItem("userEmail");
 
 if(userInfo){
 
-    userInfo.innerHTML = `👤 ${userEmail}`;
+    if(userEmail){
 
+        userInfo.innerHTML = `👤 ${userEmail}`;
+
+        userInfo.href = "profile.html";
+
+    }else{
+
+        userInfo.innerHTML = "👤 Profile";
+
+        userInfo.href = "login.html";
+    }
 }
 
 
