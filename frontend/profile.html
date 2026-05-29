@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWBIE | Profile</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/newbielogo.png" alt="NEWBIE Logo">
+        </a>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="wishlist.html">WISHLIST ❤️</a></li>
+        <li><a href="cart.html">CART 🛒</a></li>
+    </ul>
+</nav>
+
+<section class="profile-page">
+
+    <div class="profile-card">
+
+        <div class="profile-header">
+            <div class="profile-avatar">👤</div>
+            <h2>My Profile</h2>
+            <p>Complete your NEWBIE profile for a better shopping experience 💙</p>
+        </div>
+
+        <form id="profile-form">
+
+            <label>Full Name</label>
+            <input type="text" id="profileName" placeholder="Enter your full name">
+
+            <label>Email</label>
+            <input type="email" id="profileEmail" readonly>
+
+            <label>Phone Number</label>
+            <input type="text" id="profilePhone" placeholder="Enter phone number">
+
+            <label>Gender</label>
+            <select id="profileGender">
+                <option value="">Select gender</option>
+                <option>Female</option>
+                <option>Male</option>
+                <option>Other</option>
+            </select>
+
+            <label>Date of Birth</label>
+            <input type="date" id="profileDob">
+
+            <label>Address</label>
+            <textarea id="profileAddress" placeholder="Enter your delivery address"></textarea>
+
+            <label>Fashion Preference</label>
+            <select id="profileStyle">
+                <option value="">Choose your aesthetic</option>
+                <option>Soft Girl</option>
+                <option>Korean Street Style</option>
+                <option>Denim Lover</option>
+                <option>Minimal Chic</option>
+                <option>Party Wear</option>
+                <option>Casual Everyday</option>
+            </select>
+
+            <label>Size Preference</label>
+            <select id="profileSize">
+                <option value="">Select size</option>
+                <option>XS</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+            </select>
+
+            <button type="submit" class="profile-save-btn">
+                Save Profile ✨
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<div class="mobile-bottom-nav">
+    <a href="index.html">🏠<br>Home</a>
+    <a href="shop.html">🛍️<br>Shop</a>
+    <a href="wishlist.html">❤️<br>Wishlist</a>
+    <a href="cart.html">🛒<br>Cart</a>
+</div>
+
+<script src="js/profile.js"></script>
+
+</body>
+</html>
